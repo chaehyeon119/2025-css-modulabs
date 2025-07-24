@@ -10,24 +10,46 @@
         /* section 요소의 자손인 p */
         background-color: gold;
       }
+
+      /* 자식 선택자 */
       section > p {
         background-color: red;
+      }
+
+      /* 일반 형제 선택자 */
+      section ~ p {
+        background: green;
+      }
+
+      /*  인접 형제 선택자 */
+      section + p {
+        color: white;
+      }
+
+      div p {
+        color: blue;
+      }
+
+      div {
+        p {
+          border: 2px solid navy;
+        }
       }
     </style>
   </head>
   <body>
-    <p>lorem ipsum dolor sit amet</p>
-    <p>lorem ipsum dolor sit amet</p>
-    <p>lorem ipsum dolor sit amet</p>
+    <p>1. lorem ipsum dolor sit amet</p>
+    <p>2. lorem ipsum dolor sit amet</p>
+    <p>3. lorem ipsum dolor sit amet</p>
     <section>
       <div>
-        <p>lorem ipsum dolor sit amet</p>
+        <p>4. lorem ipsum dolor sit amet</p>
       </div>
-      <p>lorem ipsum dolor sit amet</p>
-      <p>lorem ipsum dolor sit amet</p>
+      <p>5. lorem ipsum dolor sit amet</p>
+      <p>6. lorem ipsum dolor sit amet</p>
     </section>
-    <p>lorem ipsum dolor sit amet</p>
-    <p>lorem ipsum dolor sit amet</p>
-    <p>lorem ipsum dolor sit amet</p>
+    <p>7. lorem ipsum dolor sit amet</p>
+    <p>8. lorem ipsum dolor sit amet</p>
+    <p>9. lorem ipsum dolor sit amet</p>
   </body>
 </html>
