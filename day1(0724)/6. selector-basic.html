@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 선택자 */
+      * {
+        /* 상속 X, 초기화 */
+        color: red;
+        margin: 0;
+      }
+      h2 {
+        color: pink;
+      }
+      button {
+        padding: 6px;
+        background: lightgray;
+        border: 1px solid black;
+        border-radius: 20px;
+      }
+      a {
+        color: black;
+      }
+      /* 아이디 선택자 */
+      #title2 {
+        color: blue;
+      }
+
+      /* 클래스 선택자 */
+      .font-blue {
+        background: skyblue;
+      }
+      .list-item {
+        font-weight: 700;
+        color: violet;
+      }
+
+      /* 속성 선택자 [] */
+      /* 속성을 가지고 있는지 확인할 수 있는 방법으로도 활용 */
+      [type] {
+        border: 2px solid red;
+      }
+      [id] {
+        text-decoration: underline;
+      }
+      /* 속성의 속성값이 일치하는지 확인하는 방법으로도 활용 */
+      [class="font-blue"] {
+        border: 2px solid blue;
+      }
+      /* 해당 속상이 포함되어 있는 것들에 다 적용하기 */
+      [class*="font-blue"] {
+        border: 2px solid yellow;
+      }
+
+      /* 그룹 선택자 */
+      section,
+      div,
+      li,
+      #title2 {
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <!-- id, class: 문자, 숫자, 하이픈(-), 언더스코어(_)만 사용 -->
+      <!-- 숫자로 시작하면 오류 -->
+      <!-- 기능 + '-' + UI 요소 형식으로 사용함(강사) ex, login-button, login- container -->
+      <h2 id="title2">Chapter02</h2>
+      <h3>10.1 선택자 기초</h3>
+      <p class="font-blue">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero at illum
+        dolor quos possimus? Odit, quae magni! Similique, perspiciatis in modi
+        vel enim quas tenetur accusantium tempore amet dolor quidem?
+      </p>
+      <button type="button">버튼1</button>
+      <button type="submit">버튼2</button>
+      <button>버튼3</button>
+      <a href="#">링크</a>
+      <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li class="font-blue list-item">item 3</li>
+      </ul>
+    </section>
+    <div>hello</div>
+  </body>
+</html>

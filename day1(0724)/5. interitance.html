@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: red;
+        border: 1px solid black;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      span {
+        color: aqua;
+        border: inherit; /* 상속되지 않는 값을 상속 받을 때 사용 */
+        color: initial; /* 속성 초기값으로 변경 */
+        font-weight: unset; /* 상속이 되면 inherit, 상속 X intial */
+        border: unset;
+
+        all: initial;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 상속모드는 일관된 스타일을 적용할 수 있음(ex, 다크모드에서 body 태그 상속 사용) -->
+    <p>김채현 <span>Chaehyeon Kim</span></p>
+  </body>
+</html>
