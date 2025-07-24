@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 클래스 + 유형 선택자 */
+      /* 구체성: 10 + 1 (금1+은1)*/
+      .ul a {
+        color: yellow;
+      }
+
+      /* 클래스 선택자 */
+      /* 구체성: 10(금1 | 점수는 작지만, 클래스 > 유형 | 클래스의 구체성이 요소보다 높음)*/
+      .click {
+        color: green;
+        background: black;
+      }
+
+      /* 유형 선택자 */
+      /* 구체성: 1x12= 12(은12) */
+      html body main section article div ul li p strong span a {
+        background: purple !important;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>
+          <div>
+            <ul class="ul">
+              <li>
+                <p>
+                  <strong>
+                    <span>
+                      <a href="#" class="click">
+                        1. 이 글자는 어떤 색일까요? 2. 배경색은 어떤 색일까요?
+                      </a>
+                    </span>
+                  </strong>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

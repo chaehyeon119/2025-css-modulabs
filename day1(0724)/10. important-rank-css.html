@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div #id1 {
+        /* 1+100 */
+        color: green;
+      }
+
+      p {
+        /* 1 */
+        color: black;
+      }
+
+      #id1 {
+        /* 100 */
+        color: blue;
+      }
+
+      .class {
+        /* 10 */
+        color: yellow;
+      }
+
+      #id3 {
+        /* 100 */
+        color: cyan !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- 110점 -->
+      <p id="id1" class="class">1. 이 글자는 어떤 색일까요?</p>
+      <!-- 1000점 -->
+      <p id="id2" class="class" style="color: red">
+        2. 이 글자는 어떤 색일까요??
+      </p>
+      <p id="id3" class="class" style="color: pink">
+        3. 이 글자는 어떤 색일까요??
+      </p>
+    </div>
+  </body>
+</html>
