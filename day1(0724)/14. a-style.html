@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .custom-link {
+        text-decoration: none; /* 기본 밑줄 제거 */
+        color: rgb(0, 0, 0);
+      }
+
+      .custom-link:hover {
+        text-decoration: underline; /* 호버 시 밑줄 표시 */
+        color: rgb(0, 140, 255);
+      }
+      .delete {
+        color: gray;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">기본 링크</a>
+    <br />
+    <a href="#" class="custom-link">스타일 지정 링크</a>
+    <a href="#" class="delete">삭제된 링크입니다.</a>
+  </body>
+</html>

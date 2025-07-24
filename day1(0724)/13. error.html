@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap");
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("./fonts/Pretendard-Regular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("./fonts/Pretendard-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .pen {
+        font-family: "Nanum Pen Script", cursive;
+      }
+
+      .bitcount {
+        /* font-family: "Bitcount", cursive로 적으면 정상 작동 => Why? */
+        font-family: "Bitcount", system-ui;
+        font-size: 30px;
+        color: blue;
+      }
+
+      .regular {
+        font-family: "Pretendard", sans-serif;
+        font-weight: 400;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="font">
+      <p class="pen">Nanum Pen Script 폰트</p>
+      <p class="bitcount">bitcount 폰트</p>
+      <p class="regular">Pretendard</p>
+    </div>
+  </body>
+</html>

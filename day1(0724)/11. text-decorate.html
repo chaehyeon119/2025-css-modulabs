@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap");
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("./fonts/Pretendard-Regular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("./fonts/Pretendard-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+      /* color 색상 */
+      .color .keyword {
+        color: mediumorchid;
+        border: 1px solid red;
+        background: pink;
+      }
+      .color .hex {
+        /* #ff00ff */
+        color: #f0f;
+        /* 마지막 2자리는 투명도(선택값) */
+        color: #bfafefaa;
+      }
+      .rgb {
+        color: rgb(255, 0, 0);
+      }
+      /* rgb에 a(알파)를 추가하여 투명도 조절 가능 */
+      .rgba {
+        /* 투명도는 0 ~ 1 사이 입력값을 사용. 0.5 => 50% */
+        color: rgba(255, 188, 5, 0.5);
+      }
+
+      /* 디자인의 일관성을 유지할 수 있다는 장점이 있음 */
+      .current-color {
+        color: navy;
+        border: 1px solid currentColor;
+        /* background-color: currentColor; */
+      }
+
+      .pen {
+        font-family: "Nanum Pen Script", cursive;
+      }
+
+      .bitcount {
+        font-family: "Bitcount", system-ui;
+      }
+
+      p {
+        font-family: "Pretendard", system-ui;
+        font-size: 24px;
+        /* font-size: 62.5% (16px * 62.5% = 10px) */
+      }
+      html {
+        font-size: 10px;
+      }
+      body {
+        font-size: 1.6rem;
+      }
+      .parent {
+        font-size: 10px;
+        font-weight: 700;
+      }
+
+      .pixels {
+        font-size: 20px;
+      }
+
+      .em {
+        /* 부모 요소의 font-size *2  */
+        font-size: 2rem;
+      }
+
+      .rem {
+        /* html(기본크기 16px) font-size *2 */
+        font-size: 2rem;
+      }
+      .text {
+        /* rem을 이용해서 30px로 만들어보기 */
+        font-size: 1.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="color">
+      <p class="keyword">키워드 설정한 색상</p>
+      <p class="hex">Hex 설정한 색상</p>
+      <p class="rgb">RGB로 설정한 색상</p>
+      <p class="rgba">RGBA로 설정한 색상</p>
+      <p class="current-color">currentColor</p>
+    </div>
+    <hr />
+
+    <div class="font">
+      <p class="pen">Nanum Pen Script 폰트</p>
+      <p class="bitcount">bitcount 폰트</p>
+      <p class="regular">Pretendard</p>
+    </div>
+    <hr />
+
+    <section class="parent">
+      <h2>글꼴의 크기는!</h2>
+      <p class="pixels">픽셀로 적용한 폰트</p>
+      <p class="em">em으로 적용한 폰트</p>
+      <p class="rem">rem으로 적용한 폰트</p>
+      <p class="text">30px을 만들고 싶어요!</p>
+    </section>
+  </body>
+</html>
