@@ -1,22 +1,32 @@
-# 2025-css
+# 2025 CSS Guide
 
-CSS 학습 정리(25.07.24~)
+> ✍️ **Author:** 김채현
+> 📅 **Date:** 2025.07.24 ~
+> 🎓 **Bootcamp:** 모두의연구소 프론트엔드 스쿨
 
-## 1. CSS란?
+---
 
-CSS(Cascading Style Sheets)는 HTML 문서의 스타일과 레이아웃을 지정하는 언어입니다. 색상, 크기, 배치 등을 설정해 시각적인 웹페이지를 만들 수 있도록 도와줍니다.
+## 📘 Overview
+
+CSS(Cascading Style Sheets)는 HTML 문서의 스타일과 레이아웃을 정의하는 언어입니다. 색상, 크기, 여백, 폰트 등 시각적 요소를 조정하여 웹페이지를 아름답게 만들 수 있습니다.
+
+---
+
+## 📗 1. What is CSS?
 
 ### 1.1 CSS의 역사와 철학
 
-- **등장 배경:** 1996년 W3C에서 CSS1 표준이 제정됨.
-- **역할:** 구조(HTML)와 표현(CSS)을 분리해 일관성과 유지보수성 향상.
-- **재사용:** 하나의 스타일시트를 여러 문서에 적용 가능.
+- 🎉 **출시:** 1996년 W3C에서 CSS1 표준 제정
+- 🔄 **목표:** HTML 구조와 시각 표현 분리
+- ♻️ **장점:** 유지보수 용이, 재사용 가능, 일관성 유지
 
-### 1.2 Cascading(계단식) 의미
+### 1.2 Cascading(계단식)의 의미
 
-스타일이 여러 곳에서 정의되었을 경우, 우선순위에 따라 스타일이 적용되는 방식을 말합니다. CSS의 철학은 이러한 우선순위를 통해 유연하고 예측 가능한 스타일링을 가능하게 합니다.
+스타일이 충돌할 때 우선순위를 따져 적용되며, 이를 통해 예측 가능한 스타일링이 가능합니다.
 
-## 2. CSS 작성과 문법
+---
+
+## 📘 2. CSS Syntax & 작성 위치
 
 ### 2.1 기본 문법
 
@@ -26,49 +36,52 @@ selector {
 }
 ```
 
-- **선택자(selector)**: 스타일을 적용할 HTML 요소
-- **속성(property)**: 변경할 스타일 종류
-- **값(value)**: 적용할 스타일 값
+- `selector`: HTML 요소 선택자
+- `property`: 스타일 속성
+- `value`: 속성에 적용할 값
 
-### 2.2 CSS 속성
+### 2.2 위치
 
-- CSS1은 약 50개의 속성으로 시작되었으나 현재는 350\~400여개로 확장됨
-- [CSS 속성 목록 참고](https://www.cssportal.com/css-properties/index.php)
-- [브라우저 호환성 확인 사이트](https://caniuse.com/)
+- `<head>` 내부에 `<link>` 또는 `<style>` 작성 권장 → 렌더링 최적화
 
-### 2.3 위치
+### 2.3 CSS 속성 참고
 
-- 내부 스타일(`style`)과 외부 스타일(`link`)은 반드시 `<head>` 내부에 작성해야 브라우저 렌더링 성능이 향상됨
+- 📚 [CSS 속성 목록](https://www.cssportal.com/css-properties/index.php)
+- 🌐 [브라우저 호환성](https://caniuse.com/)
 
-## 3. CSS 규칙과 구조
+---
 
-### 3.1 at-rule
+## 📙 3. CSS 구조 및 지시문
 
-CSS에서 `@`로 시작하는 특수 규칙들:
+### 3.1 At-rules
 
-- `@charset`, `@import`, `@font-face`, `@media`, `@supports`, `@keyframes` 등
+- `@import`, `@font-face`, `@media`, `@keyframes`, `@supports`, `@charset` 등
 
 ### 3.2 link vs @import
 
-- `@import`는 모듈화에 유리하나, 성능 면에서는 `<link>`가 더 빠름
-- 프로덕션 단계에서는 `<link>` 사용 권장
+- `@import`: 모듈화에 유리하나 성능 불리
+- `<link>`: 렌더링 우선 적용, 프로덕션 추천
 
 ### 3.3 상속 제어 키워드
 
-- `inherit`: 부모 값 상속
-- `initial`: 초기값으로 설정
-- `unset`: 상황에 따라 inherit 또는 initial 작동
-- `revert`: 브라우저 기본 스타일로 복원
+- `inherit`, `initial`, `unset`, `revert`
 
-## 4. 선택자 정리
+---
 
-### 4.1 전체 선택자 (`*`)
+## 📒 4. 선택자 정리
 
-모든 요소에 스타일 적용. 성능 저하를 유발할 수 있어 최소한 사용.
+### 4.1 전체 선택자 `*`
 
-### 4.2 타입 선택자 (`태그명`)
+```css
+* {
+  margin: 0;
+  padding: 0;
+}
+```
 
-특정 태그에 스타일 적용
+- 모든 요소에 스타일 적용 (주의: 성능 저하)
+
+### 4.2 타입 선택자 `태그명`
 
 ```css
 h1 {
@@ -76,13 +89,15 @@ h1 {
 }
 ```
 
-### 4.3 아이디 선택자 (`#id`)
+### 4.3 ID 선택자 `#id`
 
-문서 내에서 유일한 요소에 적용. 스타일링보다는 자바스크립트, 해시 링크에 사용 권장
+```css
+#header {
+  background: gray;
+}
+```
 
-### 4.4 클래스 선택자 (`.class`)
-
-재사용 가능한 스타일 작성에 적합
+### 4.4 클래스 선택자 `.class`
 
 ```css
 .text-bold {
@@ -90,58 +105,84 @@ h1 {
 }
 ```
 
-### 4.5 속성 선택자 (`[attr]`)
+### 4.5 속성 선택자 `[attr]`
 
-속성을 기준으로 스타일 적용
+속성을 기준으로 특정 요소를 선택합니다.
 
 ```css
 [title] {
-  text-decoration: underline;
+  border-bottom: 2px dotted #333;
+}
+[class="text"] {
+  color: lime;
+}
+[class*="text"] {
+  background: pink;
 }
 ```
 
-### 4.6 그룹 선택자 (`선택자1, 선택자2`)
+예시 HTML:
 
-중복 스타일 적용 시 유용
+```html
+<p title="Hello" class="text title">This paragraph has a title.</p>
+<p class="text">This paragraph doesn't have a title.</p>
+<a href="#" title="Link" class="link title">This is a link</a>
+```
+
+### 4.6 그룹 선택자
+
+```css
+h1,
+h2,
+h3 {
+  font-family: sans-serif;
+}
+```
 
 ### 4.7 복합 선택자
 
-- 자손 선택자: `section p`
-- 자식 선택자: `section > p`
-- 일반 형제: `section ~ p`
-- 인접 형제: `section + p`
+```css
+section p      /* 자손 */
+section > p    /* 자식 */
+section + p    /* 인접 형제 */
+section ~ p    /* 일반 형제 */
+```
 
-## 5. 선택자 우선순위
+---
 
-### 5.1 적용 우선순위 규칙
+## 📕 5. 선택자 우선순위 (Specificity)
 
-1. 중요성(`!important`)
+### 5.1 적용 우선순위
+
+1. `!important`
 2. 구체성(Specificity)
-3. 후자 우선(뒤에 작성된 스타일 우선)
+3. 작성 순서 (후자 우선)
 
-### 5.2 구체성 계산
+### 5.2 구체성 계산표
 
-| 선택자                | 가중치 |
-| --------------------- | ------ |
-| inline-style          | 1000   |
-| id `#`                | 100    |
-| class/속성/가상클래스 | 10     |
-| 태그/가상요소         | 1      |
-| 전체 선택자 `*`       | 0      |
+| 선택자 유형             | 점수 |
+| ----------------------- | ---- |
+| 인라인 스타일           | 1000 |
+| ID 선택자 `#id`         | 100  |
+| 클래스/속성/가상 클래스 | 10   |
+| 태그/가상 요소          | 1    |
+| 전체 선택자 `*`         | 0    |
 
-### 5.3 !important
+### 5.3 `!important`
 
-가장 우선 적용되며, 남용은 유지보수에 악영향을 줌. 제한적으로 사용.
+가장 높은 우선순위를 가지지만 남용 시 유지보수 악화.
 
-## 6. 폰트와 텍스트 관련
+---
 
-### 6.1 currentColor
+## 🎨 6. 폰트 & 텍스트
 
-color 값을 다른 속성에 재사용
+### 6.1 `currentColor`
 
 ```css
 border: 1px solid currentColor;
 ```
+
+- color 값을 다른 속성에 재활용할 수 있음
 
 ### 6.2 Generic Font Families
 
@@ -158,37 +199,38 @@ border: 1px solid currentColor;
 }
 ```
 
-- 한글, 영문 폰트 구분 필요 시: "영문", 한글, generic 순서로
-- 공백 포함 글꼴명은 반드시 따옴표 사용
+- 한글과 영문 혼용 시: `'영문 폰트', '한글 폰트', generic`
+- 공백 포함 글꼴은 반드시 따옴표로 감싸야 함
 
-## 7. font-size 단위
+---
 
-### 7.1 px / em / rem
+## 🔠 7. Font Size 단위
 
-- px: 고정 크기
-- em: 부모 요소 기준 상대 크기
-- rem: 루트 요소 기준 상대 크기
+### 7.1 px / em / rem 비교
 
 ```css
 html {
-  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  font-size: 62.5%; /* = 10px if 기본 16px */
 }
 body {
   font-size: 1.6rem; /* = 16px */
 }
 ```
 
-> 💡 일반적으로 rem 단위가 유지보수에 더 용이하여 많이 사용됨
+- `px`: 고정
+- `em`: 부모 기준
+- `rem`: root 기준 (권장)
 
-## 8. 추천 학습 사이트
-
-- [CSS Diner](https://flukeout.github.io/)
-- [CSS Speedrun](https://css-speedrun.netlify.app/)
-- [명시도 계산기](https://specificity.keegan.st/)
-- [폰트 사이트 눈누](https://noonnu.cc/)
-- [Google Fonts](https://fonts.google.com/)
+💡 유지보수를 고려할 때 `rem` 사용이 유리
 
 ---
 
-> 작성일: 2025.07.24
-> 학습자: 김채현
+## 🔗 8. 참고 사이트
+
+- 🍽️ [CSS Diner](https://flukeout.github.io/)
+- 🏃 [CSS Speedrun](https://css-speedrun.netlify.app/)
+- 📊 [명시도 계산기](https://specificity.keegan.st/)
+- ✍️ [눈누 한글 폰트](https://noonnu.cc/)
+- 🔤 [Google Fonts](https://fonts.google.com/)
+
+---
