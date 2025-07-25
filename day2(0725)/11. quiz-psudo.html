@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 방법 1. marker 가상요소 사용하기 */
+      /* .custom-bullets li::marker {
+        content: "🍎";
+      } */
+
+      /* 방법 2. before 가상요소 사용하기 */
+      .custom-bullets li {
+        list-style-type: none;
+      }
+      .custom-bullets li::before {
+        content: "🍎";
+      }
+    </style>
+  </head>
+  <body>
+    <h2>quiz: li 표시를 🍎로 바꾸기</h2>
+    <ul class="custom-bullets">
+      <li>사과</li>
+      <li>바나나</li>
+      <li>오렌지</li>
+    </ul>
+  </body>
+</html>
