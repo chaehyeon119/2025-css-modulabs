@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @counter-style emojis {
+        system: cyclic;
+        symbols: "📍" "⭐️" "😀" "✨";
+        /* '1.'처럼 뒤에 .붙는 걸 suffix라고 함 */
+        suffix: "-";
+      }
+      ul {
+        /* default: disc */
+        list-style-type: circle;
+        /* 보통은 outside를 많이 사용하므로 조작할 일 많지 않음 */
+        list-style-position: outside;
+        list-style-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' height='20' width='20' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+        background-color: aquamarine;
+        width: 300px;
+        list-style: none;
+        list-style-type: emojis;
+      }
+      ul li {
+        border: 1px solid red;
+      }
+      ol {
+        /* default: decimal */
+        list-style-type: square;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 목록을 나타내는 태그 -->
+    <ul>
+      <!-- li{item $}*5 -->
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit neque
+        modi excepturi totam quod quas atque minus voluptatibus libero vel.
+        Eaque quasi voluptas obcaecati vitae sint facere sed dignissimos
+        repellat.
+      </li>
+    </ul>
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ol>
+  </body>
+</html>

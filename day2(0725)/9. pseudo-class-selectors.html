@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .weniv:link {
+        /* 방문하지 않았을 때 */
+        color: violet;
+      }
+      .weniv:visited {
+        /* 방문했을 때 */
+        color: brown;
+      }
+
+      button {
+        padding: 6px 12px;
+        background-color: skyblue;
+        border: 1px solid black;
+      }
+      /* 마우스가 올라와있는지 */
+      button:hover {
+        background-color: green;
+      }
+      /* 마우스가 클릭되고 있는지(누르고 있는 동안에만 스타일 적용됨) */
+      button:active {
+        background-color: red;
+      }
+
+      .focus-input {
+        padding: 10px;
+        border: 2px solid #bdc3c7;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      .focus-input:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="weniv" href="https://weniv.co.kr">위니브 메인페이지</a>
+
+    <button>Button</button>
+
+    <input type="text" class="focus-input" placeholder="클릭하거나 탭하세요" />
+    <input type="text" class="focus-input" placeholder="클릭하거나 탭하세요" />
+    <input type="text" class="focus-input" placeholder="클릭하거나 탭하세요" />
+    <input type="text" class="focus-input" placeholder="클릭하거나 탭하세요" />
+  </body>
+</html>
