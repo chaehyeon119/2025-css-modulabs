@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* text-shadow는 글자의 그림자 */
+      p {
+        text-shadow: 2px 2px 4px red, 4px -4px 8px blue;
+      }
+      /* 양각 효과 - 텍스트가 튀어나와 보임 */
+      .emboss {
+        color: #888;
+        text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5),
+          1px 1px 1px rgba(255, 255, 255, 0.8);
+      }
+
+      /* 외곽선 효과 */
+      .outline {
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+
+      /* 네온 글로우 효과 */
+      .glow {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6,
+          0 0 20px #0073e6, 0 0 25px #0073e6;
+      }
+
+      /* 레트로 3D 효과 */
+      .retro {
+        color: #fff;
+        text-shadow: 2px 2px 0px #ff0000, 4px 4px 0px #0000ff;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hello World</p>
+    <h2 class="emboss">양각 효과</h2>
+    <h2 class="outline">외곽선 효과</h2>
+    <h2 class="glow">네온 글로우 효과</h2>
+    <h2 class="retro">레트로 3D 효과</h2>
+  </body>
+</html>

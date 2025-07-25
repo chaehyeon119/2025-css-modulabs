@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="ko-KR">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+          .box {
+            /* text-align은 블록 레벨에 작성하고, 내부 인라인 콘텐츠 정렬 */
+            text-align: center;
+          }
+
+          .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+          }
+
+          div:not([class]) {
+            line-height: 2.5;
+            border: 1px dashed gray;
+            margin: 10px;
+          }
+
+          .box {
+            line-height: 1;
+            background: yellow;
+            display: inline; /* block에는 적용되지 않습니다 */
+          }
+
+          .baseline {
+            vertical-align: baseline;
+          }
+
+          .top {
+            /* 형제 요소의 영향을 받음 */
+            vertical-align: top;
+          }
+          .middle {
+            vertical-align: middle;
+          }
+          .bottom {
+            vertical-align: bottom;
+          }
+          .text-top {
+            /* 부모 요소를 기준으로 */
+            vertical-align: text-top;
+          }
+          .text-bottom {
+            vertical-align: text-bottom;
+          }
+
+          .img-cont {
+            background-color: hotpink;
+          }
+
+          .img-cont img {
+            vertical-align: bottom;
+          }
+        </style>
+      </head>
+      <body>
+        <div>
+          텍스트
+          <div class="box baseline">baseline</div>
+        </div>
+        <div>
+          텍스트
+          <div class="box top">top</div>
+        </div>
+        <div>
+          텍스트
+          <div class="box middle">middle</div>
+        </div>
+        <div>
+          텍스트
+          <div class="box bottom">bottom</div>
+        </div>
+        <div>
+          텍스트
+          <div class="box text-top">text-top</div>
+        </div>
+        <div>
+          텍스트
+          <div class="box text-bottom">text-btm</div>
+        </div>
+
+        <div>
+          텍스트
+          <div class="box baseline">baseline</div>
+          <div class="box top">top</div>
+          <div class="box middle">middle</div>
+          <div class="box bottom">bottom</div>
+          <div class="box text-top">text-top</div>
+          <div class="box text-bottom">text-btm</div>
+        </div>
+        <!-- 간혹 이미지를 사용했을 때 위 아래 여백 생기는 이슈 발생 => 이미지 정렬(vertical-align을 사용해 해결) -->
+        <span class="img-cont">
+          <img src="./images/weniv-binky.png" alt="" />
+        </span>
+      </body>
+    </html>
+  </body>
+</html>
