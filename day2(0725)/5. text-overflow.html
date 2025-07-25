@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        background-color: #f0f0f0;
+        margin-bottom: 15px;
+        width: 300px;
+      }
+
+      /* 한 줄 말줄임 - clip */
+      .overflow-clip {
+        overflow: hidden;
+        white-space: nowrap; /* 텍스트의 공백을 만났을때 줄바꿈을 하지 않습니다. */
+        text-overflow: clip; /* 요소의 크기를 넘친 텍스트를 자릅니다. */
+      }
+
+      /* 한 줄 말줄임 - ellipsis */
+      .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; /* 요소의 크기를 넘친 텍스트를 말줄임 처리합니다. */
+      }
+
+      /* 여러 줄 말줄임 */
+      .multi-ellipsis {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* 블록 컨텐츠의 라인 수를 제한하는 속성입니다.*/
+      }
+    </style>
+  </head>
+  <body>
+    <h3>원본 텍스트</h3>
+    <p class="original">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ad, autem
+      quaerat sed impedit cupiditate tenetur recusandae facere, alias ab nihil
+      nisi eligendi eaque ea molestiae dolore accusantium repellat maiores?
+    </p>
+
+    <h3>text-overflow: clip (한 줄)</h3>
+    <p class="overflow-clip">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ad, autem
+      quaerat sed impedit cupiditate tenetur recusandae facere, alias ab nihil
+      nisi eligendi eaque ea molestiae dolore accusantium repellat maiores?
+    </p>
+
+    <h3>text-overflow: ellipsis (한 줄 말줄임)</h3>
+    <p class="ellipsis">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ad, autem
+      quaerat sed impedit cupiditate tenetur recusandae facere, alias ab nihil
+      nisi eligendi eaque ea molestiae dolore accusantium repellat maiores?
+    </p>
+
+    <h3>여러 줄 말줄임 (3줄)</h3>
+    <p class="multi-ellipsis">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ad, autem
+      quaerat sed impedit cupiditate tenetur recusandae facere, alias ab nihil
+      nisi eligendi eaque ea molestiae dolore accusantium repellat maiores?
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+      aperiam, unde quam quae earum perspiciatis voluptates esse fuga ratione
+      deserunt.
+    </p>
+  </body>
+</html>

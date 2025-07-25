@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .normal-line-height {
+        line-height: normal;
+      }
+      .increased-line-height {
+        line-height: 2;
+      }
+      .arial {
+        font-family: Arial;
+        font-size: 16px; /* x-height가 큼 → 시각적으로 더 크게 보임 */
+      }
+
+      .times {
+        font-family: "Times New Roman";
+        font-size: 16px; /* x-height가 작음 → 시각적으로 더 작게 보임 */
+      }
+
+      .georgia {
+        font-family: Georgia;
+        font-size: 16px; /* x-height 중간 정도 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- em, % 계산된 line-height가 상속 -->
+    <!-- 숫자만 쓰는 경우에는 자식요소 font-size에 맞춰 설정 -->
+    <p class="normal-line-height">
+      이 텍스트는 기본 행간을 사용합니다. 때로는 줄 간격이 좁아 가독성이 떨어질
+      수 있습니다.
+    </p>
+    <p class="increased-line-height">
+      이 텍스트는 증가된 행간을 사용합니다. 줄 사이의 간격이 넓어져 읽기가 더
+      쉬워집니다.
+    </p>
+    <span class="arial">Hello World</span>
+    <span class="times">Hello World</span>
+    <span class="georgia">Hello World</span>
+  </body>
+</html>
