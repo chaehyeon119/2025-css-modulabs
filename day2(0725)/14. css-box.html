@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div,
+      span {
+        width: 150px;
+        background-color: aqua;
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+      .box1 {
+        padding: 20px;
+      }
+
+      .box2 {
+        padding: 20px 15px;
+      }
+      .box3 {
+        /* 상/좌우/하 */
+        padding: 30px 20px 10px;
+      }
+      .box4 {
+        /* 시계 방향 */
+        padding: 20px;
+        padding-left: 10px;
+      }
+
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores nesciunt
+      illum deleniti totam commodi pariatur tempore molestiae quia aspernatur
+      natus ea dicta consectetur voluptatum nobis culpa quae mollitia, tenetur
+      magnam.
+    </div>
+    <div class="box1">네 면 모두 20px</div>
+    <div class="box2">상하 20px 좌우 15px</div>
+    <div class="box3">좌우 20px, 위 30px, 아래 10px</div>
+    <div class="box4">왼쪽 여백 10px, 나머지 20px</div>
+  </body>
+</html>
