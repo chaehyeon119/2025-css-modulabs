@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 제목</title>
+    <style>
+      .box {
+        width: 80vw;
+        height: 80vh;
+        background-color: skyblue;
+
+        /* 배경 이미지 */
+        background-image: url("images/weniv-chilli.png");
+
+        /* 요소의 크기만큼 반복되어서 보임 - repeat */
+        background-repeat: repeat;
+
+        background-repeat: repeat-x;
+        background-repeat: repeat-y;
+        background-repeat: no-repeat;
+
+        /* 위치를 지정 - position */
+        background-position: right bottom;
+        background-position: left center;
+        background-position: center;
+
+        background-position: 0% 0%;
+        background-position: 0% 30%;
+
+        background-position: 0px 0px;
+        background-position: 40px 30px;
+
+        background-position: 100px;
+        /* x-position y-postion */
+        /* 1개의 값만 있는 경우 x-postion, y-postion은 center */
+
+        background-position: 100px;
+        background-position: center;
+
+        /* 크기를 지정 -size */
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: pink;
+        width: 150px;
+        height: 100px;
+        margin: 20px auto;
+      }
+      .box1 {
+        /* border */
+        /* 1px -> border-width */
+        /* solid -> boder-style */
+        /* red -> border-color */
+        border: 5cqi solid red;
+
+        /* 스타일 border-style */
+        border-style: dashed;
+        border-style: double dotted;
+
+        /* 색상 border-color */
+        border-color: blue;
+        border-color: green yellow red black;
+
+        /* shorten */
+        border: none;
+        border-top: 10px dotted green;
+        border-left: 10px solid yellow;
+        border-right: 10px double dodgerblue;
+      }
+
+      /* .box1, box2 어떤 차이가 있나? 크기가 다름 */
+      /* width, hegiht가 콘텐츠의 크기를 기준을 적용 */
+      .box {
+        padding: 20px;
+      }
+      div {
+        box-sizing: content-box;
+        box-sizing: border-box;
+        /* width,height 포함되는 범위 -> border까지 */
+        /* 상속되는 속성이 아님 -> 전체 선택자를 이용해서 box-sizing 설정 */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+  </body>
+</html>
