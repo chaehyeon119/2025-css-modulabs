@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 제목</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+        border: 10px solid black;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: white;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        /* ✅ 새 이미지: 크고 눈에 띄는 이미지 */
+        background-image: url("https://via.placeholder.com/120x120/FF0000/FFFFFF?text=BG");
+        background-repeat: no-repeat;
+        background-size: 100px 100px;
+        background-position: top left;
+        background-color: #444;
+
+        /* 시각적으로 더 뚜렷하게 보기 위해 배경색 제한 */
+        background-clip: content-box;
+      }
+
+      .border-box {
+        background-origin: border-box;
+      }
+
+      .padding-box {
+        background-origin: padding-box;
+      }
+
+      .content-box {
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box border-box">border-box</div>
+    <div class="box padding-box">padding-box</div>
+    <div class="box content-box">content-box</div>
+  </body>
+</html>
