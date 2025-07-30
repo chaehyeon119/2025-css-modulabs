@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼 만들기 실습 예제</title>
+    <style>
+      /* 공통 버튼 스타일 */
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        width: 120px;
+        height: 50px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        text-decoration: underline;
+      }
+      /* <------- normal 버튼 -------> */
+      .normal {
+        color: #cbd5df;
+        background-color: #343f40;
+      }
+      .normal:hover,
+      .normal:active {
+        color: #fff;
+        background-color: #343f50;
+      }
+
+      .normal:disabled {
+        color: #4a5568;
+        background: #343f50;
+      }
+
+      /* <------- positive 버튼 -------> */
+      .positive {
+        color: #439aff;
+        background-color: #343f50;
+      }
+
+      .positive:hover,
+      .positive:active {
+        color: #fff;
+        background-color: #439aff;
+        border: 1px solid #439aff;
+      }
+
+      /* <------- negative 버튼 -------> */
+      .negative {
+        color: #eb5757;
+        background-color: #343f50;
+      }
+
+      .negative:hover,
+      .negative:active {
+        color: #fff;
+        background-color: #eb5757;
+        border: 1px solid #eb5757;
+      }
+
+      /* <------- 공동 hover/active -------> */
+      .normal:hover,
+      .positive:hover,
+      .negative:hover {
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+      }
+
+      .normal:active,
+      .positive:active,
+      .negative:active {
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="normal">Button</button>
+    <button class="normal" disabled>Button</button>
+    <button class="positive">Yes</button>
+    <button class="negative">Del</button>
+  </body>
+</html>

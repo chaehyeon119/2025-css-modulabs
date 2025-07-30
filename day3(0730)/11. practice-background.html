@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        border: 1px solid black;
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        background: url(./images/weniv-garry.png) center / cover no-repeat;
+        /* garry를 반복하지 않고 가운데 이미지 가득 차게 */
+      }
+      .box2 {
+        border: 1px solid black;
+        width: 80vw;
+        height: 50vh;
+        margin-left: auto;
+        background: url(./images/weniv-suri.png) repeat-y top left / contain;
+        /* suri를 y축 반복으로 비율 깨지지 않고 위부터 이미지 전체 보이게 */
+      }
+      .box3 {
+        border: 1px solid black;
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+        background: url(./images/weniv-licat.png) repeat-x left center / 33.33%
+          greenyellow;
+        /* licat을 x축 반복으로 가운데에 3개의 이미지가 보이도록 하고 배경색은 greenyellow  */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>

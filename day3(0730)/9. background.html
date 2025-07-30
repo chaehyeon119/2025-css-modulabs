@@ -39,7 +39,35 @@
         background-position: center;
 
         /* 크기를 지정 -size */
+        /* 비율을 유지, 잘리지 않는 최대 크기 -> 여백 */
         background-size: contain;
+
+        /* 비율을 유지, 여백이 생기지 않는 최대 크기 -> 이미지의 일부가 잘릴 수 있음 */
+        background-size: cover;
+        background-size: 50% 50%;
+        background-size: 350px 500px;
+
+        /* background-clip 범위 */
+        border: 10px dashed black;
+        background-clip: border-box;
+        background-clip: padding-box;
+        padding: 10px;
+        background-clip: content-box;
+        background-clip: border-box;
+
+        /* 배경 이미지의 범위 -origin */
+        /* background-repeat: repeat; */
+        all: revert;
+        width: 80vw;
+        height: 80vh;
+        border: 10px dashed black;
+        background-image: url("images/weniv-chilli.png");
+        background-image: url("images/weniv-chilli.png");
+
+        background-origin: border-box;
+        background-origin: padding-box;
+        padding: 10px;
+        background-origin: content-box;
       }
     </style>
   </head>
