@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 제목</title>
+    <style>
+      .parent {
+        background-color: lemonchiffon;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        position: absolute;
+      }
+
+      .box .red {
+        top: 40px;
+        left: 40px;
+        background-color: rgb(255, 0, 0, 0.5);
+      }
+
+      .box.green {
+        top: 80px;
+        left: 80px;
+        background-color: rgb(0, 255, 0, 0.5);
+      }
+
+      .box.blue {
+        top: 120px;
+        left: 120px;
+        background-color: rgb(0, 0, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box red">1</div>
+      <div class="box green">2</div>
+      <div class="box blue">3</div>
+    </div>
+  </body>
+</html>
