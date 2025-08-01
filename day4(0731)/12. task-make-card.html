@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 예제_카드 만들기(1)</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("./fonts/Pretendard-Regular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Pretendard-Bold";
+        src: url("./fonts/Pretendard-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Pretendard", system-ui;
+      }
+
+      .postcard {
+        width: 288px;
+        height: 348px;
+        background: #ffffff;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding-bottom: 16px;
+      }
+      .head-text {
+        font-family: "Pretendard-Bold", system-ui;
+        font-size: 16px;
+        width: 200px;
+        height: 20px;
+        display: block;
+        margin: 16px;
+        margin-top: 21px;
+      }
+
+      .main-text {
+        width: 256px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 160%;
+        color: #5a6a72;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        margin: 16px;
+        margin-bottom: 19px;
+        /* outline: 1px solid red; */
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+        display: block;
+      }
+
+      a {
+        font-family: "Pretendard-Bold", system-ui;
+        color: #29363d;
+        font-size: 14px;
+        width: 70px;
+        height: 24px;
+        /* outline: 1px red solid; */
+        margin-left: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="postcard">
+      <img
+        src="./images/img-card.png"
+        alt="깔끔한 책상과 의자가 놓여있고, 옆에 커다란 화분이 놓여져있어 안정감을 주는 공간"
+      />
+      <span class="head-text">그것을 피가 청춘을 것이다</span>
+      <p class="main-text">
+        청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘
+        것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지
+        청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다.
+        방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고
+        우리 평화스러운 있는가?
+      </p>
+      <a href="#">Read</a>
+    </div>
+  </body>
+</html>
