@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 콘텐츠 모집</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Pretendard", sans-serif;
+        background-color: #f9f9f9;
+        color: #1e1e1e;
+      }
+
+      .content {
+        max-width: 1200px;
+        margin: 100px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      /* 텍스트 영역 */
+      .text-box h2 {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+
+      .text-box h2 strong {
+        display: block;
+        font-weight: 800;
+        font-size: 36px;
+        margin-top: 8px;
+      }
+
+      .text-box p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #555;
+      }
+
+      /* 카드 영역 */
+      .card-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .card {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        border-radius: 16px;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      .card1 {
+        background-image: url("./images/Rectangle 2.png");
+      }
+
+      .card2 {
+        background-image: url("./images/Rectangle 3.png");
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .overlay p {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .overlay span {
+        font-size: 14px;
+        text-align: right;
+      }
+
+      /* ✅ Tablet: 768px 이상 */
+      @media (min-width: 768px) {
+        .text-box h2 {
+          font-size: 36px;
+        }
+
+        .text-box h2 strong {
+          font-size: 42px;
+        }
+
+        .card-box {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .card {
+          width: calc(50% - 10px);
+          height: 200px;
+        }
+      }
+
+      /* Desktop: 1024px 이상 */
+      @media (min-width: 1024px) {
+        .content {
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+        }
+
+        .card-box {
+          flex-direction: column;
+        }
+
+        .card {
+          width: 100%;
+          height: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="content">
+      <!-- 왼쪽 텍스트 -->
+      <div class="text-box">
+        <h2>
+          위니브에서<br />
+          <strong>함께 콘텐츠 제작하실<br />분을 모십니다.</strong>
+        </h2>
+        <p>
+          위니브는 ICT 연구 및 (코딩)교육 기관이며<br />
+          다양한 사회 공헌 활동을 하고 있습니다.
+        </p>
+      </div>
+
+      <!-- 오른쪽 카드 -->
+      <div class="card-box">
+        <div class="card card1">
+          <div class="overlay">
+            <p>IT 교육 영상 콘텐츠</p>
+            <span>바로가기 →</span>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="overlay">
+            <p>IT 서적</p>
+            <span>바로가기 →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

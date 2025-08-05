@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습: 시계 만들기</title>
+    <style>
+      .clock {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: #f0f0f0;
+        border: 10px solid #333;
+        border-radius: 50%;
+        margin: 100px auto;
+      }
+
+      .frame {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: bottom center;
+      }
+
+      .hours {
+        width: 10px;
+        height: 80px;
+        background-color: red;
+        /* 12시간 */
+        animation: rotate-hour 43200s linear infinite;
+      }
+
+      .minutes {
+        width: 6px;
+        height: 110px;
+        background-color: yellowgreen;
+        /* 60분 */
+        animation: rotate-minute 3600s linear infinite;
+      }
+
+      .secs {
+        width: 2px;
+        height: 140px;
+        background-color: black;
+        /* 60초 */
+        animation: rotate-second 60s linear infinite;
+      }
+
+      @keyframes rotate-hour {
+        from {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        to {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
+
+      @keyframes rotate-minute {
+        from {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        to {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
+
+      @keyframes rotate-second {
+        from {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        to {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="frame hours"></div>
+      <div class="frame minutes"></div>
+      <div class="frame secs"></div>
+    </div>
+  </body>
+</html>

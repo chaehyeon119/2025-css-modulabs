@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습: 빌딩 움직이게 하기</title>
+    <style>
+      .building {
+        width: 113px;
+        height: 176px;
+        background: url("./images/building.png") no-repeat top left / auto 100%;
+        animation: move-building 3s steps(34) infinite;
+      }
+
+      @keyframes move-building {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -3842px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="building"></div>
+  </body>
+</html>
